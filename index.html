@@ -3,38 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Голос Jalsomino777</title>
-    
+    <title>Jalsomino777 | Манифест Свободы</title>
     <style>
+        /* === Основные стили для всего сайта === */
         body {
+            margin: 0;
+            padding: 0;
             font-family: 'Georgia', serif;
-            background: #1a1a1a url('bg.jpg') no-repeat center center fixed;
-            background-size: cover;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
-            color: #f0f0f0;
+            min-height: 100vh;
+            
+            /* ЗАДНИЙ ФОН: Ваше изображение */
+            background-image: url('bg.jpg'); 
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            background-attachment: fixed;
+            
+            /* Эффект затемнения поверх фона */
+            background-color: rgba(0, 0, 0, 0.4); 
+            background-blend-mode: darken;
+            position: relative; /* Нужно для позиционирования элементов внутри body */
         }
+
+        /* === ТЕКСТ СПРАВА СВЕРХУ === */
+        .top-right-text {
+            position: absolute; /* Абсолютное позиционирование относительно экрана */
+            top: 20px;          /* Отступ сверху */
+            right: 20px;         /* Отступ справа */
+            max-width: 300px;    /* Чтобы длинный текст не растягивался во всю ширину */
+            background: rgba(0, 0, 0, 0.6); /* Полупрозрачный темный фон для читаемости */
+            color: #fdfcf0;      /* Светло-кремовый духовный цвет текста */
+            padding: 15px;
+            border-radius: 8px;
+            border-right: 3px solid #d4af37; /* Золотой акцент сбоку */
+            font-size: 14px;
+            line-height: 1.5;
+            font-style: italic;  /* Курсив для молитвенного текста */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            z-index: 10;         /* Чтобы текст всегда был поверх фона */
+        }
+
+        /* === НЕОБЫЧНАЯ ФОРМА ОКНА (Контейнера) === */
         .container {
-            background: rgba(0, 0, 0, 0.7);
-            padding: 40px;
-            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.85); 
+            backdrop-filter: blur(10px); 
+            color: #222; 
+            padding: 50px;
+            border-radius: 50px 200px 50px 200px; 
             text-align: center;
-            box-shadow: 0 0 20px rgba(0,0,0,0.5);
-            max-width: 500px;
-            border-top: 3px solid #cc0000; /* Красный акцент */
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4); 
+            border: 2px solid rgba(255,255,255,0.2);
+            max-width: 500px; 
+            width: 80%; 
+            margin-top: 80px; /* Отступ сверху, чтобы на мобильных не перекрывалось верхним текстом */
         }
-        h1 { font-size: 28px; text-transform: uppercase; letter-spacing: 2px; }
-        p { font-size: 18px; line-height: 1.6; opacity: 0.9; }
+
+        /* КРУГЛОЕ ФОТО ВНУТРИ ОКНА */
+        .profile-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%; 
+            object-fit: cover; 
+            border: 5px solid white; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            margin-bottom: 25px; 
+        }
+
+        h1 {
+            font-size: 30px;
+            margin: 10px 0;
+            color: #333;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+        
+        .accent {
+            color: #cc0000; 
+            font-weight: bold;
+        }
+        
+        .footer-link {
+            font-size: 14px;
+            color: #555;
+            text-decoration: none;
+            margin-top: 20px;
+            display: block;
+        }
+
+        /* Адаптивность для мобильных телефонов */
+        @media (max-width: 600px) {
+            .top-right-text {
+                position: relative; /* На телефонах текст переместится наверх по центру */
+                top: auto;
+                right: auto;
+                margin: 20px auto;
+                max-width: 90%;
+            }
+            body {
+                flex-direction: column; /* Элементы выстраиваются друг за другом */
+                justify-content: flex-start;
+                padding: 10px;
+            }
+            .container {
+                margin-top: 10px;
+            }
+        }
     </style>
-    </head>
+</head>
 <body>
-    <div class="container">
-        <h1>Монифест Свободы</h1>
-        <p>Пусть созидание сменит разрушение.</p>
-        <p><em>jalsomino777.github.io</em></p>
+
+    <!-- Наш молитвенный текст в правом верхнем углу -->
+    <div class="top-right-text">
+        «Да воскре́снет Бог, и расточа́тся врази́ Его́, и да бежа́т от лица́ Его́ ненави́дящии Его́.»
     </div>
+
+    <!-- Главное окно сайта -->
+    <div class="container">
+        <!-- Ваше фото (photo.jpg) -->
+        <img src="photo.jpg" alt="Символ Свободы" class="profile-img">
+        
+        <h1>Манифест Свободы</h1>
+        
+        <p>Приветствую! Это мой личный сайт, посвященный важным темам.</p>
+        
+        <p>Я выступаю против <span class="accent">цензуры</span> и за свободное слово. Каждый имеет право быть услышанным.</p>
+        
+        <p>Также моя цель — поддержка мирного служения Православной Церкви Украины (<span class="accent">Московского Патриархата</span>) и прекращение гонений.</p>
+        
+        <p>Свободный выезд из страны — неотъемлемое право человека.</p>
+        
+        <p>Давайте созидать мир взамен разрушения.</p>
+        
+        <a href="https://jalsomino777.github.io" class="footer-link">jalsomino777.github.io</a>
+    </div>
+
 </body>
 </html>
